@@ -36,25 +36,25 @@
 <script>
     // Add an event listener to each button
     document.getElementById("button1").addEventListener("click", function () {
-        sendButtonValue1("LED1ON");
+        sendButtonValue1("1");
     });
 
     document.getElementById("button2").addEventListener("click", function () {
-        sendButtonValue1("LED1OFF");
+        sendButtonValue1("2");
     });
     document.getElementById("button3").addEventListener("click", function () {
-        sendButtonValue2("LED2ON");
+        sendButtonValue2("3");
     });
 
     document.getElementById("button4").addEventListener("click", function () {
-        sendButtonValue2("LED2OFF");
+        sendButtonValue2("4");
     });
     document.getElementById("button5").addEventListener("click", function () {
-        sendButtonValue3("LED3ON");
+        sendButtonValue3("5");
     });
 
     document.getElementById("button6").addEventListener("click", function () {
-        sendButtonValue3("LED3OFF");
+        sendButtonValue3("6");
     });
 
     // Send a HTTP request with the button value as a parameter
