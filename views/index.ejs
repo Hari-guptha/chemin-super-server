@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-        <button value="1">
-            on
-        </button>
-        <button value="0">
-            off
-        </button>
-    </a>
+    <button id="button1" value="1">on</button>
+    <button id="button2" value="0">off</button>
 </body>
+<script>
+    // Add an event listener to each button
+    document.getElementById("button1").addEventListener("click", function () {
+        sendButtonValue("1");
+    });
+
+    document.getElementById("button2").addEventListener("click", function () {
+        sendButtonValue("0");
+    });
+
+    // Send a HTTP request with the button value as a parameter
+    function sendButtonValue(value) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("value=" + value);
+    }
+
+</script>
+
 </html>
