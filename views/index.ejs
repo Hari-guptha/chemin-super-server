@@ -6,20 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        button{
+            width:150px;
+            height: 50px;
+        }
+    </style>
 </head>
 
 <body>
-    <button id="button1" value="1">on</button>
-    <button id="button2" value="0">off</button>
+    <div style="display: flex;justify-content: center;justify-items: center;">
+        <div>
+            <h1>LED 1</h1>
+            <button id="button1">on</button>
+            <button id="button2">off</button>
+            <h1>LED 2</h1>
+            <button id="button3">on</button>
+            <button id="button4">off</button>
+            <h1>LED 3</h1>
+            <button id="button5">on</button>
+            <button id="button6">off</button>
+        </div>
+    </div>
 </body>
 <script>
     // Add an event listener to each button
     document.getElementById("button1").addEventListener("click", function () {
-        sendButtonValue("1");
+        sendButtonValue("LED1ON");
     });
 
     document.getElementById("button2").addEventListener("click", function () {
-        sendButtonValue("0");
+        sendButtonValue("LED1OFF");
+    });
+    document.getElementById("button3").addEventListener("click", function () {
+        sendButtonValue("LED2ON");
+    });
+
+    document.getElementById("button4").addEventListener("click", function () {
+        sendButtonValue("LED2OFF");
+    });
+    document.getElementById("button5").addEventListener("click", function () {
+        sendButtonValue("LED3ON");
+    });
+
+    document.getElementById("button6").addEventListener("click", function () {
+        sendButtonValue("LED3OFF");
     });
 
     // Send a HTTP request with the button value as a parameter
