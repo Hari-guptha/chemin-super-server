@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.use(express.static("views"))
+
 app.get('/api', (req, res) => {
-    res.send("holly cow")
+    res.render("index.ejs")
 })
 
 app.post('/home', (req, res) => {
