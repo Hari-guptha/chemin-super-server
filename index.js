@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 })
 
 app.post("/post", (req, res) => {
+    const buttonValue = 0
     buttonValue = req.body.value;
     res.send(buttonValue);
     console.log(buttonValue)
