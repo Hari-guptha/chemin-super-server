@@ -12,6 +12,14 @@ app.get('/api', (req, res) => {
     res.send("po da venna")
 })
 
+app.get('/on', (req, res) => {
+    res.send("1")
+})
+app.get('/off', (req, res) => {
+    res.send("0")
+})
+
+
 app.post('/home', (req, res) => {
     res.send("we are good")
 })
