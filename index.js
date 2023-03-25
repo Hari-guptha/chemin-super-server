@@ -7,15 +7,13 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.render("index.ejs")
-    const buttonValue = req.body.value;
-    console.log(buttonValue)
-    res.send( buttonValue);
+
 })
 
-app.post("/api", (req, res) => {
-    const buttonValue = req.body.value;
+app.post("/post", (req, res) => {
+    buttonValue = req.body.value;
+    res.send(buttonValue);
     console.log(buttonValue)
-    res.send( buttonValue);
 });
 
 app.get('/on', (req, res) => {

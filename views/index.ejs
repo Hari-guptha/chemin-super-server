@@ -25,7 +25,7 @@
     // Send a HTTP request with the button value as a parameter
     function sendButtonValue(value) {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/", true);
+        xhr.open("POST", "/post", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send("value=" + value);
     }
