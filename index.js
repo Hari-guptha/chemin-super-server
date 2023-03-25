@@ -26,9 +26,8 @@ app.post("/post3", (req, res) => {
 });
 
 app.get("/fun",(req,res)=>{
-    res.send(`${buttonValue1}`);
-    res.send(`${buttonValue2}`);
-    res.send(`${buttonValue3}`);
+    res.send([`${buttonValue1}`,`${buttonValue2}`,`${buttonValue3}`]);
+
 })
 
 
