@@ -12,8 +12,14 @@ app.get('/', (req, res) => {
 
 })
 
-app.post("/post", (req, res) => {
-    buttonValue = req.body.value;
+app.post("/post1", (req, res) => {
+    buttonValue1 = req.body.value;
+});
+app.post("/post2", (req, res) => {
+    buttonValue2 = req.body.value;
+});
+app.post("/post3", (req, res) => {
+    buttonValue3 = req.body.value;
 });
 
 app.get("/fun",(req,res)=>{

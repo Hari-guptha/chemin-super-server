@@ -36,31 +36,43 @@
 <script>
     // Add an event listener to each button
     document.getElementById("button1").addEventListener("click", function () {
-        sendButtonValue("LED1ON");
+        sendButtonValue1("LED1ON");
     });
 
     document.getElementById("button2").addEventListener("click", function () {
-        sendButtonValue("LED1OFF");
+        sendButtonValue1("LED1OFF");
     });
     document.getElementById("button3").addEventListener("click", function () {
-        sendButtonValue("LED2ON");
+        sendButtonValue2("LED2ON");
     });
 
     document.getElementById("button4").addEventListener("click", function () {
-        sendButtonValue("LED2OFF");
+        sendButtonValue2("LED2OFF");
     });
     document.getElementById("button5").addEventListener("click", function () {
-        sendButtonValue("LED3ON");
+        sendButtonValue3("LED3ON");
     });
 
     document.getElementById("button6").addEventListener("click", function () {
-        sendButtonValue("LED3OFF");
+        sendButtonValue3("LED3OFF");
     });
 
     // Send a HTTP request with the button value as a parameter
-    function sendButtonValue(value) {
+    function sendButtonValue1(value) {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/post", true);
+        xhr.open("POST", "/post1", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("value=" + value);
+    }
+    function sendButtonValue2(value) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/post2", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send("value=" + value);
+    }
+    function sendButtonValue3(value) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/post3", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send("value=" + value);
     }
