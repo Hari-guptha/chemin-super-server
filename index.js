@@ -9,8 +9,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api', (req, res) => {
-    res.render("po da venna")
+    res.send("po da venna")
 })
+
 app.post('/home', (req, res) => {
     res.send("we are good")
 })
