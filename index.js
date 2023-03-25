@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+var buttonValue = 0
 app.set('view engine', 'ejs');
 app.use(express.static("views"))
 app.use(express.urlencoded({ extended: true }));
@@ -11,11 +11,12 @@ app.get('/', (req, res) => {
 })
 
 app.post("/post", (req, res) => {
-    var buttonValue = 0
     buttonValue = req.body.value;
-    res.send(buttonValue);
-    console.log(buttonValue)
 });
+
+app.get("/fun",(req,res)=>{
+    res.send(`${buttonValue}`);
+})
 
 app.get('/on', (req, res) => {
     res.send("1")
