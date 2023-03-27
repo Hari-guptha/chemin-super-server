@@ -25,10 +25,14 @@ app.post("/post3", (req, res) => {
     buttonValue3 = req.body.value;
 });
 
-app.get("/fun",(req,res)=>{
-    res.send([`${buttonValue1}`,`${buttonValue2}`,`${buttonValue3}`]);
-
+app.get("/fun1",(req,res)=>{
+    res.send(`${buttonValue1}`);
 })
-
+app.get("/fun2",(req,res)=>{
+    res.send(`${buttonValue2}`);
+})
+app.get("/fun3",(req,res)=>{
+    res.send(`${buttonValue3}`);
+})
 
 app.listen(4000)
