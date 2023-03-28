@@ -42,6 +42,7 @@ app.post("/temphum",(req,res)=>{
     const hum = req.body.hum;
     console.log(`Received temperature: ${temp}, humidity: ${hum}`);
     res.sendStatus(200);
+    res.send(`Received temperature: ${temp}, humidity: ${hum}`)
 })
 
 app.get("/getsense",(req,res)=>{
