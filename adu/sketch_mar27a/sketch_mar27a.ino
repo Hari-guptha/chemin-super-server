@@ -2,8 +2,8 @@
 #include <ESP8266HTTPClient.h>
 #include <WiFiClientSecure.h>
 
-const char* ssid = "AnbuFTTH";
-const char* password = "anbu@1964";
+const char* ssid = "Titan";
+const char* password = "12346789";
 const int relayPin1 = 16;
 const int relayPin2 = 5;
 const int relayPin3 = 0;
